@@ -8,12 +8,20 @@ import 'package:spread_operator/spread_operator.dart' as spread_operator;
 void main() {
   print("Before using spread Operator");
   beforeUsingSpreadOperator();
+
   // Using Spread Operator with list
   print("Using Spread Operator with list");
   usingSpreadOperator();
+
+ // Using Spread Operator with list with future
+  print("Using Spread Operator with list future");
+  usingSpreadOperatorWithFuture();
+
+
   // Using Spread Operator with Map
   print("Using Spread Operator with Map");
   spreadOperatorWithMap();
+  
   // Using Spread Operator with Sets
   print("Using Spread Operator with Sets"); 
   spreadOperatorWithSets();
@@ -23,6 +31,7 @@ void main() {
   so modifying the list through either reference affects the same underlying list object. 
   This is why both x and y have the same elements and the final output shows that the list is mutable.
    */
+  print("Mutable"); 
   var x = [1,2,3,4];
   var y = x; // y is a reference to the same list as x
   y.add(5); // modify the list through the reference y
@@ -34,6 +43,7 @@ void main() {
    Since b is a new list object, modifying it does not affect the original list a.
    This is why a has the original elements and the final output shows that the list is immutable.
    */
+  print("immutable");
   var a = [1,2,3,4];
   var b = [...a]; // create a new list with the same elements as a using the spread operator
   b.add(5); // modify the new list b
@@ -52,6 +62,14 @@ void beforeUsingSpreadOperator(){
   //Result will be [D, E, F, [A, B, C]]
 }
 
+void usingSpreadOperatorWithFuture() async{
+  Future<List<int>> l1 = Future.value([1, 2, 3]);
+  Future<List<int>> l2 = Future.value([3, 4, 5]);
+  List<int> result = [...await l1, ...await l2];
+  print("Future $result");
+  //Result will be [D, E, F, [A, B, C]]
+}
+
 void usingSpreadOperator(){
   List list1 = ["A", "B", "C"];
 
@@ -60,6 +78,10 @@ void usingSpreadOperator(){
   print(list2); 
   //Result [D, E, F, A, B, C]
 
+  print("Using Spread Operator with list with if condition");
+  bool condition = true;
+  List result = [...list1, if(condition) ...list2];
+  print(result);
 }
 
 void spreadOperatorWithMap(){
