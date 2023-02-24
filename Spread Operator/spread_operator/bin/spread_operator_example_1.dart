@@ -14,16 +14,26 @@ void main() {
   print("Using Spread Operator with Sets"); 
   spreadOperatorWithSets();
 
+  /**
+  Both x and y refer to the same list object, 
+  so modifying the list through either reference affects the same underlying list object. 
+  This is why both x and y have the same elements and the final output shows that the list is mutable.
+   */
   var x = [1,2,3,4];
-  var y = x;
-  y.add(5);
+  var y = x; // y is a reference to the same list as x
+  y.add(5); // modify the list through the reference y
   print(x); // Output [1, 2, 3, 4, 5] => mutable
   print(y); // Output => [1, 2, 3, 4, 5]
 
+  /**
+   We create a new list b with the same elements as a using the spread operator. 
+   Since b is a new list object, modifying it does not affect the original list a.
+   This is why a has the original elements and the final output shows that the list is immutable.
+   */
   var a = [1,2,3,4];
-  var b = [...a];
-  b.add(5);
-  print(a); // Output [1, 2, 3, 4] => i,mutable
+  var b = [...a]; // create a new list with the same elements as a using the spread operator
+  b.add(5); // modify the new list b
+  print(a); // Output [1, 2, 3, 4] => immutable
   print(b); // Output => [1, 2, 3, 4, 5]
 
   
