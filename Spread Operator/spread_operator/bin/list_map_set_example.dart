@@ -114,6 +114,7 @@ void spreadOperatorWithSets(){
   print("Result1 : $result");
   //Result {1, 2, 3, 4, 5, 6}
 
+  //Using nested spread operator is also possible.
   Set<int> result1 = {...{...s1, ...s2}, 7, 8};
   print("Result1 : $result1");
   //Result1 : {1, 2, 3, 4, 5, 6, 7, 8}
@@ -134,4 +135,4 @@ bin/spread_operator_example_1.dart:57:25: Error: A value of type 'Set<int>' can'
   */
 }
 
-// fswatch -o bin/ | xargs -n1 -I{} sh -c 'clear; dart bin/spread_operator_example_1.dart'
+// fswatch -o bin/ | xargs -n1 -I{} sh -c 'clear; dart bin/list_map_set_example.dart'

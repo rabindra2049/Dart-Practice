@@ -26,4 +26,4 @@ void spreadOperatorWithNullAware(List<int> list1){
   //Result [1, 2, 3]
 }
 
-// fswatch -o bin/ | xargs -n1 -I{} sh -c 'clear; dart bin/spread_operator_example_1.dart'
+// fswatch -o bin/ | xargs -n1 -I{} sh -c 'clear; dart bin/null_aware_example.dart'
