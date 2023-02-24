@@ -62,12 +62,18 @@ void beforeUsingSpreadOperator(){
   //Result will be [D, E, F, [A, B, C]]
 }
 
+///Cab used on Future by adding await after the triple dot (...) notation.
 void usingSpreadOperatorWithFuture() async{
   Future<List<int>> l1 = Future.value([1, 2, 3]);
   Future<List<int>> l2 = Future.value([3, 4, 5]);
   List<int> result = [...await l1, ...await l2];
-  print("Future $result");
-  //Result will be [D, E, F, [A, B, C]]
+  print("Future LIST $result");
+  //Result::  Future [1, 2, 3, 3, 4, 5]
+  Future<Set<int>> s1 = Future.value({1, 2, 3});
+  Future<Set<int>> s2 = Future.value({3, 4, 5});
+  Set<int> result1 = {...await s1, ...await s2};
+  print("Future SET $result1");
+  
 }
 
 void usingSpreadOperator(){
@@ -105,8 +111,13 @@ void spreadOperatorWithSets(){
   Set<int> s1 = {1,2,3};
   Set<int> s2 = {4,5,6};
   Set<int> result = {...s1,...s2};
-  print(result);
+  print("Result1 : $result");
   //Result {1, 2, 3, 4, 5, 6}
+
+  Set<int> result1 = {...{...s1, ...s2}, 7, 8};
+  print("Result1 : $result1");
+  //Result1 : {1, 2, 3, 4, 5, 6, 7, 8}
+
 
   /** 
   Set<int> result = {s1,s2};
