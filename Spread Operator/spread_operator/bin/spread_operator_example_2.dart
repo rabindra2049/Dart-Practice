@@ -17,6 +17,8 @@ void spreadOperatorWithNull(List<int> list1){
   */
 }
 
+///By using the null-aware operator, the value will be checked first and if it's null, 
+///it will be ignored.
 void spreadOperatorWithNullAware(List<int> list1){
   List<int>? nullList = null;
   List<int> result = [...list1 , ...?nullList];
