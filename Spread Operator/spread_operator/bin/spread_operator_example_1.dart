@@ -1,5 +1,9 @@
 import 'package:spread_operator/spread_operator.dart' as spread_operator;
 
+///Prior to Dart 2.3, we have to use addAll to combine two List instances.
+/// Now, the spread operator makes it easier for us to do the same thing.
+
+
 /// Spread Operator are used for inserting multiple emlements in a collection like List, Map etc
 void main() {
   print("Before using spread Operator");
