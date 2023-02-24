@@ -26,3 +26,11 @@ abstract class User with _$User {
        - a toString override listing all the properties of the object
        - an operator == and hashCode override (since User is immutable)
  */
+
+
+//Union
+@freezed
+abstract class Operation with _$Operation{
+  const factory Operation.add(int value) = Add;
+  const factory Operation.subtract(int value) = _Subtract;
+}

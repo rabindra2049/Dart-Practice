@@ -156,3 +156,350 @@ abstract class _User implements User {
   @JsonKey(ignore: true)
   _$$_UserCopyWith<_$_User> get copyWith => throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$Operation {
+  int get value => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int value) add,
+    required TResult Function(int value) subtract,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int value)? add,
+    TResult? Function(int value)? subtract,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int value)? add,
+    TResult Function(int value)? subtract,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Add value) add,
+    required TResult Function(_Subtract value) subtract,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Add value)? add,
+    TResult? Function(_Subtract value)? subtract,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Add value)? add,
+    TResult Function(_Subtract value)? subtract,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $OperationCopyWith<Operation> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $OperationCopyWith<$Res> {
+  factory $OperationCopyWith(Operation value, $Res Function(Operation) then) =
+      _$OperationCopyWithImpl<$Res, Operation>;
+  @useResult
+  $Res call({int value});
+}
+
+/// @nodoc
+class _$OperationCopyWithImpl<$Res, $Val extends Operation>
+    implements $OperationCopyWith<$Res> {
+  _$OperationCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_value.copyWith(
+      value: null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$AddCopyWith<$Res> implements $OperationCopyWith<$Res> {
+  factory _$$AddCopyWith(_$Add value, $Res Function(_$Add) then) =
+      __$$AddCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int value});
+}
+
+/// @nodoc
+class __$$AddCopyWithImpl<$Res> extends _$OperationCopyWithImpl<$Res, _$Add>
+    implements _$$AddCopyWith<$Res> {
+  __$$AddCopyWithImpl(_$Add _value, $Res Function(_$Add) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$Add(
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$Add implements Add {
+  const _$Add(this.value);
+
+  @override
+  final int value;
+
+  @override
+  String toString() {
+    return 'Operation.add(value: $value)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Add &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddCopyWith<_$Add> get copyWith =>
+      __$$AddCopyWithImpl<_$Add>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int value) add,
+    required TResult Function(int value) subtract,
+  }) {
+    return add(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int value)? add,
+    TResult? Function(int value)? subtract,
+  }) {
+    return add?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int value)? add,
+    TResult Function(int value)? subtract,
+    required TResult orElse(),
+  }) {
+    if (add != null) {
+      return add(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Add value) add,
+    required TResult Function(_Subtract value) subtract,
+  }) {
+    return add(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Add value)? add,
+    TResult? Function(_Subtract value)? subtract,
+  }) {
+    return add?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Add value)? add,
+    TResult Function(_Subtract value)? subtract,
+    required TResult orElse(),
+  }) {
+    if (add != null) {
+      return add(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Add implements Operation {
+  const factory Add(final int value) = _$Add;
+
+  @override
+  int get value;
+  @override
+  @JsonKey(ignore: true)
+  _$$AddCopyWith<_$Add> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_SubtractCopyWith<$Res> implements $OperationCopyWith<$Res> {
+  factory _$$_SubtractCopyWith(
+          _$_Subtract value, $Res Function(_$_Subtract) then) =
+      __$$_SubtractCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int value});
+}
+
+/// @nodoc
+class __$$_SubtractCopyWithImpl<$Res>
+    extends _$OperationCopyWithImpl<$Res, _$_Subtract>
+    implements _$$_SubtractCopyWith<$Res> {
+  __$$_SubtractCopyWithImpl(
+      _$_Subtract _value, $Res Function(_$_Subtract) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$_Subtract(
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_Subtract implements _Subtract {
+  const _$_Subtract(this.value);
+
+  @override
+  final int value;
+
+  @override
+  String toString() {
+    return 'Operation.subtract(value: $value)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Subtract &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SubtractCopyWith<_$_Subtract> get copyWith =>
+      __$$_SubtractCopyWithImpl<_$_Subtract>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int value) add,
+    required TResult Function(int value) subtract,
+  }) {
+    return subtract(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int value)? add,
+    TResult? Function(int value)? subtract,
+  }) {
+    return subtract?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int value)? add,
+    TResult Function(int value)? subtract,
+    required TResult orElse(),
+  }) {
+    if (subtract != null) {
+      return subtract(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Add value) add,
+    required TResult Function(_Subtract value) subtract,
+  }) {
+    return subtract(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Add value)? add,
+    TResult? Function(_Subtract value)? subtract,
+  }) {
+    return subtract?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Add value)? add,
+    TResult Function(_Subtract value)? subtract,
+    required TResult orElse(),
+  }) {
+    if (subtract != null) {
+      return subtract(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Subtract implements Operation {
+  const factory _Subtract(final int value) = _$_Subtract;
+
+  @override
+  int get value;
+  @override
+  @JsonKey(ignore: true)
+  _$$_SubtractCopyWith<_$_Subtract> get copyWith =>
+      throw _privateConstructorUsedError;
+}
